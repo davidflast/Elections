@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Elections/Elections.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Elections/Person.cs">
+    <Files>
+      <File FileName="Elections/Person.cs" Line="10" Column="6" />
+      <File FileName="Elections/PersonGenerator.cs" Line="8" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
