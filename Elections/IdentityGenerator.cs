@@ -2,8 +2,9 @@
 
 namespace Elections
 {
-	public static class PersonGenerator
-	{
+	public static class IdentityGenerator
+	{	
+		//generates ethnicity
 		public static string generateEthnicity ()
 		{
 			Random r = new Random ();
@@ -19,7 +20,7 @@ namespace Elections
 			return ethnicity;
 	
 		}
-
+		//generates party
 		public static string generateParty (string e)
 		{
 			string party;

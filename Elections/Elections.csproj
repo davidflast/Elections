@@ -32,6 +32,8 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Person.cs" />
-    <Compile Include="PersonGenerator.cs" />
+    <Compile Include="IdentityGenerator.cs" />
+    <Compile Include="OpinionGenerator.cs" />
+    <Compile Include="MathHelper.cs" />
   </ItemGroup>
 </Project>

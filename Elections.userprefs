@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="Elections/Elections.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Elections/Person.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Elections/OpinionGenerator.cs">
     <Files>
-      <File FileName="Elections/Person.cs" Line="10" Column="6" />
-      <File FileName="Elections/PersonGenerator.cs" Line="8" Column="4" />
+      <File FileName="Elections/Person.cs" Line="4" Column="2" />
+      <File FileName="Elections/IdentityGenerator.cs" Line="23" Column="20" />
+      <File FileName="Elections/MathHelper.cs" Line="17" Column="4" />
+      <File FileName="Elections/OpinionGenerator.cs" Line="9" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1,0 +1,48 @@
+,race,party,immOpinion,freq,total,Percent Chance,
+1,black,democrat,Decreased,56,,37%,23%
+2,black,democrat,Increased,35,,23%,63%
+3,black,democrat,Kept at present level,60,,40%,100%
+4,black,democrat,NA,10,151,,
+5,black,independent,Decreased,4,,31%,38%
+6,black,independent,Increased,5,,38%,69%
+7,black,independent,Kept at present level,4,,31%,100%
+8,black,independent,NA,5,13,,
+9,black,republcan,Decreased,8,,38%,29%
+10,black,republcan,Increased,6,,29%,62%
+11,black,republcan,Kept at present level,7,,33%,100%
+,,,,,21,,
+12,hispanic,democrat,Decreased,11,,18%,43%
+13,hispanic,democrat,Increased,26,,43%,81%
+14,hispanic,democrat,Kept at present level,23,,38%,99%
+15,hispanic,democrat,NA,7,60,,
+16,hispanic,independent,Decreased,7,,33%,43%
+17,hispanic,independent,Increased,9,,43%,67%
+18,hispanic,independent,Kept at present level,5,,24%,100%
+19,hispanic,independent,NA,1,21,,
+20,hispanic,republcan,Decreased,5,,25%,35%
+21,hispanic,republcan,Increased,7,,35%,75%
+22,hispanic,republcan,Kept at present level,8,,40%,100%
+23,hispanic,republcan,NA,1,20,,
+24,white,democrat,Decreased,153,,24%,29%
+25,white,democrat,Increased,184,,29%,76%
+26,white,democrat,Kept at present level,303,,47%,100%
+27,white,democrat,NA,38,640,,
+28,white,independent,Decreased,45,,39%,19%
+29,white,independent,Increased,22,,19%,61%
+30,white,independent,Kept at present level,49,,42%,100%
+31,white,independent,NA,12,116,,
+32,white,republcan,Decreased,285,,39%,20%
+33,white,republcan,Increased,149,,20%,60%
+34,white,republcan,Kept at present level,294,,40%,99%
+35,white,republcan,NA,33,728,,
+36,NA,democrat,Decreased,18,,,
+37,NA,democrat,Increased,18,,,
+38,NA,democrat,Kept at present level,32,,,
+39,NA,democrat,NA,1,,,
+40,NA,independent,Decreased,8,,,
+41,NA,independent,Increased,5,,,
+42,NA,independent,Kept at present level,7,,,
+43,NA,independent,NA,4,,,
+44,NA,republcan,Decreased,9,,,
+45,NA,republcan,Increased,8,,,
+46,NA,republcan,Kept at present level,15,,,
