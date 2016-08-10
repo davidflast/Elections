@@ -34,35 +34,33 @@ namespace Elections
 		public int politicsImport;
 		public int scoreD;
 		public int scoreR;
-		public int contactCount;
 		public string vote;
+		Random random;
 
 
 		public Person ()
-		{
-			ethnicity = IdentityGenerator.generateEthnicity ();
-			party = IdentityGenerator.generateParty (ethnicity);
-			imm = OpinionGenerator.generateImm (party, ethnicity);
-			trade = OpinionGenerator.generateTrade (party, ethnicity);
-			contactCount = 0;
-			tradeImport = MathHelper.sampleNormalOne ();
-			immImport = MathHelper.sampleNormalOne ();
-			politicsImport = MathHelper.sampleNormalOne ();
-			care = MathHelper.sampleNormalOne ();
+		{	
+			random = new Random ();
+			ethnicity = IdentityGenerator.generateEthnicity (random);
+			party = IdentityGenerator.generateParty (random, ethnicity);
+			imm = OpinionGenerator.generateImm (random, party, ethnicity);
+			trade = OpinionGenerator.generateTrade (random, party, ethnicity);
+			tradeImport = MathHelper.sampleNormalOne (random);
+			immImport = MathHelper.sampleNormalOne (random);
+			politicsImport = MathHelper.sampleNormalOne (random);
+			care = MathHelper.sampleNormalOne (random);
 			immD = new List<int>();
-			immDImport = null;
+			immDImport = 0;
 			tradeD = new List<int>();
-			tradeDImport = null;
+			tradeDImport = 0;
 			immR = new List<int>();
-			immRImport = null;
+			immRImport = 0;
 			tradeR = new List<int>();
-			tradeRImport = null;
-			care = null;
-			careD = null;
-			careR = null;
-			scoreDif = null;
-			scoreD = null;
-			scoreR = null;	
+			tradeRImport = 0;
+			careD = 0;
+			careR = 0;
+			scoreD = 0;
+			scoreR = 0;	
 		}
 
 		public void ad (String topic, String party, int strength, int import, int careChange)
@@ -78,6 +76,7 @@ namespace Elections
 					immRImport = immRImport + import;
 					careR = careR + careChange;
 				}
+				break;
 			case "trade":
 				if (party == "democrat") {
 					tradeD.Add (strength);
@@ -88,6 +87,7 @@ namespace Elections
 					tradeRImport = tradeRImport + import;
 					careD = careD + careChange;
 				}
+				break;
 			}
 		}
 

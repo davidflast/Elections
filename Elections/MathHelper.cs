@@ -6,40 +6,38 @@ namespace Elections
 	public static class MathHelper
 	{
 		// Generate a number (0.0, 1.0) from the normal distribution
-		public static float sampleNormal (double mean, double stddev)
+		public static double sampleNormal (Random random, double mean, double stddev)
 		{
-			Random random = new Random();
-			float r1 = 1 - random.NextDouble ();
-			float r2 = 1 - random.NextDouble ();
+			double r1 = 1 - random.NextDouble ();
+			double r2 = 1 - random.NextDouble ();
 
-			float std = Math.Sqrt (-2.0 * Math.Log (r1)) * Math.Cos (2.0 * Math.PI * r2);
+			double std = Math.Sqrt (-2.0 * Math.Log (r1)) * Math.Cos (2.0 * Math.PI * r2);
 
 			return mean + stddev * std;
 		}
 
-		public static float sampleNormalOne ()
+		public static int sampleNormalOne (Random r)
 		{
-			float sample = sampleNormal (.5, .25);
-				if (sample > 1) {
-					sample = 1;
+			double sample = sampleNormal (r, 50, 25);
+				if (sample > 100) {
+					sample = 100;
 				} else if (sample < 0) {
 					sample = 0;
 				} 
-			return sample;
+			return (int) sample;
 				
 		}
 
 
-		public static string cumulativeProbability (int[] probability){
-			float [] mean = {25, 50, 75};
-			Random random = new Random();
+		public static int cumulativeProbability (Random random , int[] probability){
+			int [] mean = {25, 50, 75};
 			int r = random.Next (1, 100);
 			int count = 0;
 			foreach (int num in probability) {
-				if (r <= probability [num]) {
-					return sampleNormalOne (mean [count],12);
-					count = count + 1;
+				if (r <= num) {
+					return (int) sampleNormal (random, mean [count],12);
 				} 
+				count = count + 1;
 			}
 			return 50;
 		}

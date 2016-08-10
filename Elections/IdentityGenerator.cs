@@ -5,9 +5,8 @@ namespace Elections
 	public static class IdentityGenerator
 	{	
 		//generates ethnicity
-		public static string generateEthnicity ()
+		public static string generateEthnicity (Random r)
 		{
-			Random r = new Random ();
 			string ethnicity;
 			int e = r.Next (1,100);
 			if (e <= 17) {
@@ -21,10 +20,9 @@ namespace Elections
 	
 		}
 		//generates party
-		public static string generateParty (string e)
+		public static string generateParty (Random r, string e)
 		{
 			string party;
-			Random r = new Random ();
 			int p = r.Next (1, 100);
 			if (e == "black") {
 				if (p <= 82) {

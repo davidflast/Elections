@@ -35,5 +35,6 @@
     <Compile Include="IdentityGenerator.cs" />
     <Compile Include="OpinionGenerator.cs" />
     <Compile Include="MathHelper.cs" />
+    <Compile Include="Test.cs" />
   </ItemGroup>
 </Project>
