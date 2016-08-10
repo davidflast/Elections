@@ -4,7 +4,7 @@ namespace Elections
 {
 	public static class OpinionGenerator
 	{
-		public static int generateImm(string party, string ethnicity)
+		public static float generateImm(string party, string ethnicity)
 		{
 			switch (ethnicity) {
 			case "black":
