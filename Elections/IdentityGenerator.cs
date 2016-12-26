@@ -5,51 +5,48 @@ namespace Elections
 	public static class IdentityGenerator
 	{	
 		//generates ethnicity
-		public static string generateEthnicity (Random r)
+		public static Ethnicity generateEthnicity (Random r)
 		{
 			string ethnicity;
 			int e = r.Next (1,100);
 			if (e <= 17) {
-				ethnicity = "black";
+				return Ethnicity.Black;
 			} else if (e <= 42) {
-				ethnicity = "hispanic";
-			} else {
-				ethnicity = "white";
+				return Ethnicity.Hispanic;
 			}
-			return ethnicity;
-	
+			return Ethnicity.White;
 		}
+
 		//generates party
-		public static string generateParty (Random r, string e)
+		public static Party generateParty (Random r, Ethnicity e)
 		{
 			string party;
 			int p = r.Next (1, 100);
-			if (e == "black") {
+			switch (e) {
+			case Ethnicity.Black:
 				if (p <= 82) {
-					party = "dem";
-				} else if(p <= 86){
-					party = "rep";
-				} else {
-					party = "ind";
-				}
-			} else if (e == "hispanic") {
+					return Party.Democrat;
+				} else if (p <= 86) {
+					return Party.Republican;
+				} 
+				return Party.Indepdendent;
+			
+			case Ethnicity.Hispanic:
 				if (p <= 39) {
-					party = "dem";
+					return Party.Democrat;
 				} else if(p <= 69){
-					party = "rep";
-				} else {
-					party = "ind";
-				}
-			} else {
+					return Party.Republican;
+				} 	
+				return Party.Indepdendent;
+
+			case Ethnicity.White:
 				if (p <= 33) {
-					party = "dem";
+					return Party.Democrat;
 				} else if(p <= 77){
-					party = "rep";
-				} else {
-					party = "ind";
+					return Party.Republican;
 				}
+				return Party.Indepdendent;
 			}
-			return party;
 		}
 
 	}

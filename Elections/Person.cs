@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Elections
 {
@@ -63,6 +64,12 @@ namespace Elections
 			scoreR = 0;	
 		}
 
+		internal Person(Ethnicity ethnicity, Party party, Opinion immigration) {
+			this.ethnicity = ethnicity;
+			this.party = party;
+			this.immigration = immigration;
+		}
+
 		public void ad (String topic, String party, int strength, int import, int careChange)
 		{
 			switch (topic) {
@@ -92,10 +99,10 @@ namespace Elections
 		}
 
 		public void decide(){
-			int immDScore = (100 - 2 * Math.Abs(imm - MathHelper.averageList(immD))) * immImport;
-			int tradeDScore = (100 - 2 * Math.Abs(trade - MathHelper.averageList(tradeD))) * tradeImport;
-			int immRScore = (100 - 2 * Math.Abs(imm - MathHelper.averageList(immR))) * immImport;
-			int tradeRScore = (100 - 2 * Math.Abs(trade - MathHelper.averageList(tradeR))) * tradeImport;
+			int immDScore = (100 - 2 * Math.Abs(imm - immD.Average())) * immImport;
+			int tradeDScore = (100 - 2 * Math.Abs(trade - tradeD.Average())) * tradeImport;
+			int immRScore = (100 - 2 * Math.Abs(imm - immR.Average())) * immImport;
+			int tradeRScore = (100 - 2 * Math.Abs(trade - tradeR.Average())) * tradeImport;
 			scoreD = immDScore + tradeDScore;
 			scoreR = immRScore + tradeRScore;
 			if (scoreD > scoreR + 20 && scoreD - scoreR > 100 - politicsImport) {

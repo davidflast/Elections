@@ -36,5 +36,9 @@
     <Compile Include="OpinionGenerator.cs" />
     <Compile Include="MathHelper.cs" />
     <Compile Include="Test.cs" />
+    <Compile Include="Opinion.cs" />
+    <Compile Include="Ethnicity.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="PersonGenerator.cs" />
   </ItemGroup>
 </Project>

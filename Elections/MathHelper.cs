@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Elections
 {
@@ -35,19 +36,11 @@ namespace Elections
 			int count = 0;
 			foreach (int num in probability) {
 				if (r <= num) {
-					return (int) sampleNormal (random, mean [count],12);
+					return (int) sampleNormal (random, mean[count], 12);
 				} 
-				count = count + 1;
+				count++;
 			}
 			return 50;
-		}
-
-		public static int averageList (List<int> list){
-			int total = 0;
-			foreach (int item in list) {
-				total = total + item;
-			}
-			return total / list.Count;
 		}
 	}
 }
